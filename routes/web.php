@@ -24,3 +24,5 @@ Route::get('{id}/edit', 'BlogController@edit')->name('edit');
 Route::post('{id}/edit', 'BlogController@update')->name('update');
 
 Route::get('{id}/destroy', 'BlogController@destroy')->name('destroy');
+
+Route::get('detail/{id}', 'BlogController@detail')->name('detail');

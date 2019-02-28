@@ -93,4 +93,10 @@ class BlogController extends Controller
         $delete->delete();
         return redirect()->route('index');
     }
+
+    public function detail($id){
+        $detail = Blog::find($id);
+        $a = 'tuan';
+        return view('detail', compact('detail', 'id'));
+    }
 }
