@@ -13,7 +13,6 @@
 <body>
 <div class="container">
     <h3>Noi dung bai viet: {{$detail->title}}</h3>
-
     {{$detail->bai_viet}}
     <br>
     <a href="{{route('index')}}">< Back</a>

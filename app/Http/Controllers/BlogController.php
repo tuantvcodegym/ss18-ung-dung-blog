@@ -76,6 +76,7 @@ class BlogController extends Controller
     public function update(Request $request, $id)
     {
         $edit = Blog::find($id);
+        $edit->title = $request->input('input');
         $edit->bai_viet = $request->input('edit');
         $edit->save();
         return redirect()->route('index');
@@ -96,7 +97,12 @@ class BlogController extends Controller
 
     public function detail($id){
         $detail = Blog::find($id);
-        $a = 'tuan';
         return view('detail', compact('detail', 'id'));
+    }
+
+    public function search(Request $request){
+        $search = Blog::all();
+        $demo = $request->input('input');
+        return view('search', compact('search', 'demo'));
     }
 }

@@ -26,3 +26,5 @@ Route::post('{id}/edit', 'BlogController@update')->name('update');
 Route::get('{id}/destroy', 'BlogController@destroy')->name('destroy');
 
 Route::get('detail/{id}', 'BlogController@detail')->name('detail');
+
+Route::post('search', 'BlogController@search')->name('search');

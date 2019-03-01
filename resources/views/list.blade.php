@@ -1,6 +1,11 @@
 @extends('layouts.master')
 @section('content')
     <h3>List Blog</h3>
+    <form method="post" action="{{route('search')}}">
+        {{csrf_field()}}
+        <input type="text" name="input">
+        <input type="submit" value="Search">
+    </form>
     <table class="table table-hover">
         <tr>
             <td>Id</td>
